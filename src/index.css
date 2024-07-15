@@ -1,5 +1,9 @@
+/* Imports --------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root{
-  --color-foreground: #3d4608;
+  --color-foreground: #ffffff;
   --color-accent: #9AF3FF;
   --color-accent-dark: #14AABF;
   --color-bg: #000000;
@@ -11,17 +15,13 @@
   --font-std: "Rubik", sans-serif;
   --font-metadata: "DM Mono", monospace;
   --font-weight-metadata: 500;
-  --font-size-body: 1.6rem;
+  --font-size-regular: 1.6rem;
   --font-size-small: 1.4rem;
   --font-size-display: 6.4rem;
   --font-weight-regular: 400;
   --font-weight-bold: 500;
   --font-weight-display: 600;
 }
-
-/* Typo --------------- */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Some resets --------------- */
 
@@ -36,11 +36,17 @@ input, button, label, textarea{
 
 /* Base --------------- */
 
+html{
+  font-size: 10px;
+}
+
 body{
   font-family: sans-serif;
   padding: 0;
   margin: 0;
-  font-size: 10px;
+  font-size: var(--font-size-regular);
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
 }
 
 /* Some common elements --------------- */
