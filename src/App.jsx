@@ -1,9 +1,11 @@
+import Header from "./components/Header.jsx"
+
 function App() {
 
   return (
-    <p>
-      Barry Richards - Web designer
-    </p>
+
+    <Header/>
+
   )
 
 }
