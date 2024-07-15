@@ -1,0 +1,105 @@
+:root{
+  --color-foreground: #3d4608;
+  --color-accent: #9AF3FF;
+  --color-accent-dark: #14AABF;
+  --color-bg: #000000;
+  --color-bg-alt: #222222;
+  --color-feint-line: rgb(255, 255, 255, 0.2);
+  --border-radius: 4px;
+  --block-spacing: 2rem;
+  --block-spacing--shallow: 1rem;
+  --font-std: "Rubik", sans-serif;
+  --font-metadata: "DM Mono", monospace;
+  --font-weight-metadata: 500;
+  --font-size-body: 1.6rem;
+  --font-size-small: 1.4rem;
+  --font-size-display: 6.4rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 500;
+  --font-weight-display: 600;
+}
+
+/* Typo --------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Some resets --------------- */
+
+p, ul, ol, img, li, h1, h2, h3, h4, h5, h6, input, select, textarea, label{
+  padding-top: 0;
+  margin-top: 0;
+}
+
+input, button, label, textarea{
+  margin-bottom: var(--block-spacing--shallow);
+}
+
+/* Base --------------- */
+
+body{
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+/* Some common elements --------------- */
+
+hr{
+  border: 0;
+  background-color: black;
+  height: 1px;
+  margin-bottom: var(--block-spacing);
+}
+
+button{
+  background-color: var(--color-foreground);
+  border: none;
+  text-transform: uppercase;
+  padding: .5em .8em;
+  margin: .5em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Header -------------------- */
+
+/* Container -------------------- */
+
+.container{
+  padding:0 var(--block-spacing);
+}
+
+/* Card -------------------- */
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: .5rem;
+  margin: .5rem;
+}
+
+.card{
+  background-color: var(--color-bg-alt);
+  padding: .5rem;
+  position: relative;
+  border-radius: var(--border-radius);
+  list-style: none;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--block-spacing--shallow);
+}
+
+/* Footer -------------------- */
+
+.footer{
+  padding: var(--block-spacing);
+  height: 300px;
+}
