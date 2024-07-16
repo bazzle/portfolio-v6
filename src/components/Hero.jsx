@@ -11,7 +11,7 @@ function Hero(){
                     </p>
                 </div>
                 <div className="hero__links">
-                    <a href="mailto:barry@br-web.me">barry@br-web.me</a>
+                    <a href="mailto:barry@br-web.me">barry@br-web.me</a> &mdash;
                     <a href="https://www.linkedin.com/in/br-web/">LinkedIn</a>
                 </div>
             </div>

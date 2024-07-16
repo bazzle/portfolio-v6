@@ -37,6 +37,10 @@ input, button, label, textarea{
   margin-bottom: var(--block-spacing--shallow);
 }
 
+*{
+  box-sizing: border-box;
+}
+
 /* Base --------------- */
 
 html{
@@ -51,11 +55,22 @@ body{
   font-family: var(--font-std);
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
+  /* &:before{
+    content: '';
+    border: 10px solid white;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+  } */
 }
 
 a{
-  color: white;
+  color: var(--color-accent);
   text-decoration: underline;
+  text-underline-offset: .15em;
   &:hover{
     text-decoration: none;
   }
@@ -105,6 +120,13 @@ button{
   padding-bottom: var(--block-spacing--shallow);
 }
 
+.header__inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .header__site-name{
   margin: 0;
   padding: 0;
@@ -117,10 +139,20 @@ button{
   position: relative;
   top: .05em;
   letter-spacing: 0.03em;
+  flex-shrink: 0;
 }
 
 .header__site-name span.name{
   color: var(--color-accent);
+}
+
+.header__line{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  width: 100%;
 }
 
 /* Hero -------------------- */
