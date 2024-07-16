@@ -10,14 +10,17 @@
   --color-bg-alt: #222222;
   --color-feint-line: rgb(255, 255, 255, 0.2);
   --border-radius: 4px;
-  --block-spacing: 2rem;
-  --block-spacing--shallow: 1rem;
+  --gutter-padding: 2rem;
+  --gutter-padding--mobile: 4rem;
+  --block-spacing: 4rem;
+  --block-spacing--shallow: 2rem;
   --font-std: "Rubik", sans-serif;
   --font-metadata: "DM Mono", monospace;
   --font-weight-metadata: 500;
   --font-size-regular: 1.6rem;
   --font-size-small: 1.4rem;
   --font-size-display: 6.4rem;
+  --font-size-display-small: 4rem;
   --font-weight-regular: 400;
   --font-weight-bold: 500;
   --font-weight-display: 600;
@@ -41,12 +44,37 @@ html{
 }
 
 body{
-  font-family: sans-serif;
   padding: 0;
   margin: 0;
-  font-size: var(--font-size-regular);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-alt);
   color: var(--color-foreground);
+  font-family: var(--font-std);
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+}
+
+a{
+  color: white;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+/* Helpers --------------- */
+
+.highlight{
+  color: var(--color-accent);
+}
+
+/* Layout --------------- */
+
+.container{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: var(--gutter-padding--mobile);
+  padding-right: var(--gutter-padding--mobile);
 }
 
 /* Some common elements --------------- */
@@ -70,6 +98,56 @@ button{
 }
 
 /* Header -------------------- */
+
+.header{
+  background-color: var(--color-bg-alt);
+  padding-top: var(--block-spacing--shallow);
+  padding-bottom: var(--block-spacing--shallow);
+}
+
+.header__site-name{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  display: flex;
+  gap: .5em;
+  position: relative;
+  top: .05em;
+  letter-spacing: 0.03em;
+}
+
+.header__site-name span.name{
+  color: var(--color-accent);
+}
+
+/* Hero -------------------- */
+
+.hero{
+  background-color: var(--color-bg);
+  padding-top: calc(var(--block-spacing)*4);
+  padding-bottom: calc(var(--block-spacing)*4);
+}
+
+.hero__message{
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-display);
+}
+
+.hero__message__main{
+  margin-bottom: .6em;
+}
+
+.hero__message__sub{
+  font-size: var(--font-size-display-small);
+}
+
+.hero__links{
+  display: flex;
+  gap: 1em;
+}
 
 /* Container -------------------- */
 
