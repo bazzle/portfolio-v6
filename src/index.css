@@ -21,6 +21,8 @@
   --font-size-small: 1.4rem;
   --font-size-display: 6.4rem;
   --font-size-display-small: 4rem;
+  --font-size-display-responsive: clamp(2.8rem, 5vw, 6.4rem);
+  --font-size-display-small-responsive: clamp(2.2rem, 4vw, 5.6rem);
   --font-weight-regular: 400;
   --font-weight-bold: 500;
   --font-weight-display: 600;
@@ -125,6 +127,18 @@ button{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  @media only screen and (min-width:600px){
+    &:after{
+      content: '';
+      right: calc(8rem - 6px);
+      background-color: var(--color-accent);
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .header__site-name{
@@ -159,12 +173,16 @@ button{
 
 .hero{
   background-color: var(--color-bg);
-  padding-top: calc(var(--block-spacing)*4);
-  padding-bottom: calc(var(--block-spacing)*4);
+}
+
+.hero__inner{
+  position: relative;
+  padding-top: calc(var(--block-spacing)*3);
+  padding-bottom: calc(var(--block-spacing)*3);
 }
 
 .hero__message{
-  font-size: var(--font-size-display);
+  font-size: var(--font-size-display-responsive);
   font-weight: var(--font-weight-display);
 }
 
@@ -173,12 +191,36 @@ button{
 }
 
 .hero__message__sub{
-  font-size: var(--font-size-display-small);
+  font-size: var(--font-size-display-small-responsive);
 }
 
 .hero__links{
   display: flex;
   gap: 1em;
+}
+
+/* Dots -------------------- */
+
+.vertical-dots{
+  display: none;
+  @media only screen and (min-width:600px){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    height: calc(100% - 12rem);
+    max-height: 420px;
+  }
+}
+
+.dot{
+  background-color: var(--color-accent);
+  width: 4px;
+  height: 4px;
+  position: relative;
+  transform: rotate(45deg);
 }
 
 /* Container -------------------- */
