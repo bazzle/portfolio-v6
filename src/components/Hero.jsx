@@ -3,7 +3,7 @@ import VerticalDots from "./vertical-dots";
 
 function Hero(){
     return(
-        <div className="hero">
+        <section className="hero">
             <div className="container">
                 <div className="hero__inner">
                     <div className="hero__message">
@@ -21,7 +21,7 @@ function Hero(){
                     <VerticalDots/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
