@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Status from "./components/Status"
 import SkillsAndAbilities from "./components/Skills-and-abilities"
 import Footer from "./components/footer"
+import WorkHistory from "./components/work-history"
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
         <Hero/>
         <Status/>
         <SkillsAndAbilities/>
+        <WorkHistory/>
+        
         <Footer/>
     </>
 

@@ -5,7 +5,7 @@ function Footer(){
     return(
         <footer className="footer">
             <div className="container">
-                <p>&copy; Barry Richards {currentYear}</p>
+                <p className="footer__line text-mono-lower">&copy; Barry Richards {currentYear}</p>
             </div>
         </footer>
     )

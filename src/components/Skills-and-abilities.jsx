@@ -38,7 +38,7 @@ function SkillsAndAbilities(){
     return(
         <section className="skills-abilities">
             <div className="container">
-                <SectionHead titleString="Skills and Abilities"/>
+                <SectionHead titleString="Skills and Abilities" separator/>
                 <div className="skills-abilities__inner">
                     <ul className="skills-list">
                         {skillsItems.map(item => (
